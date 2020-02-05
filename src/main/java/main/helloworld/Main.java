@@ -40,6 +40,12 @@ public class Main {
         
         System.out.println("-------------------------------------------------");
         
+        // 0-5 -> Baby
+        // 6-11 -> Kid
+        // 12-17 -> Teen
+        // 18 - 150  -> Adult
+        // other -> Invalid
+        
         System.out.print("Unesite broj godina: ");
         Scanner input2 = new Scanner(System.in);
         int personAge = input2.nextInt();
@@ -56,15 +62,40 @@ public class Main {
             System.out.println("Adult");
         } 
         
-        // 0-5 -> Baby
-        // 6-11 -> Kid
-        // 12-17 -> Teen
-        // 18 - 150  -> Adult
-        // other -> Invalid
         
+        System.out.print("Unesiti redni broj dana u nedelji (1-7): ");
+        Scanner input3 = new Scanner(System.in);
+        int dayNumber = input3.nextInt();
         
-        // TO DO switch 
-        
-    }
+        String day;
+
+        switch (dayNumber) {
+           case 1:
+             day = "Ponedeljak";
+             break;
+           case 2:
+             day = "Utorak";
+             break;
+           case 3:
+             day = "Sreda";
+             break;
+           case 4:
+             day = "Četvrtak";
+             break;
+           case 5:
+             day = "Petak";
+             break;
+           case 6:
+             day = "Subota";
+             break;
+           case 7:
+             day = "Nedelja";
+             break;
+           default: 
+             day = "Netačan unos";
+             break;
+        }
+        System.out.println(day);
     
+    }
 }
